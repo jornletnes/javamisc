@@ -8,22 +8,15 @@ class MyPanel extends JPanel {
     private int _gridCellSize = 5;
     private int _gridSize = _gridCellSize * 256;
 
-    
-    private Geometry generateGeometry() {
-        int randomNumber = (int)(Math.random() * 100);
-        if (randomNumber < 50)
-            return new Circle();
-        return new Square();
-    }
-
     public MyPanel() {
 
         _geometries = new ArrayList<Geometry>();
+        GeometryGenerator generator = new GeometryGenerator();
 
         for (int i=0; i<_gridSize; i+=_gridCellSize) {
             for (int j=0; j<_gridSize; j+=_gridCellSize) {
 
-                Geometry geometry = generateGeometry();
+                Geometry geometry = generator.generate();
                 geometry.setX(i);
                 geometry.setY(j);
                 geometry.setRadius(_gridCellSize);

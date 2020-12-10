@@ -34,6 +34,7 @@ abstract class Geometry {
     public void setColor(int r, int g, int b) {
         _color = new Color(r, g, b);
     }
+    
     public Color getColor() {
         return _color;
     }
