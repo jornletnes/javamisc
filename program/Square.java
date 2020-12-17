@@ -1,3 +1,5 @@
+package program;
+
 import java.awt.Graphics;
 
 class Square extends Geometry{

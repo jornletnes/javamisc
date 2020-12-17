@@ -1,3 +1,4 @@
+package program;
 
 class GeometryGenerator {
 
